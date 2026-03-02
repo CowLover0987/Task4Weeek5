@@ -21,7 +21,7 @@ The main function is within an actor class I created called TriggerPrinter which
 ## 3. Outcome (≈150 words)
 
 I created a C++ actor class called TriggerPrinter, within the .cpp file is where I created the function OnOverlapBegin():
-
+```C
     void ATriggerPrinter::OnOverlapBegin(
         UPrimitiveComponent* OverlappedComp,
         AActor* OtherActor,
@@ -42,11 +42,11 @@ I created a C++ actor class called TriggerPrinter, within the .cpp file is where
     
         }
     }
-
+```
 Which fires when the Trigger actor's collision box is overlapped by another to which it then prints to the screen 'Player entered the area!'.
 
 The collision box was also created within the .cpp file and the OverlapBegin function is bound to it.
-
+```C
     Box = CreateDefaultSubobject<UBoxComponent>(TEXT("Box"));
     RootComponent = Box;
     
@@ -56,9 +56,9 @@ The collision box was also created within the .cpp file and the OverlapBegin fun
     Box->SetCollisionResponseToChannel(ECC_Pawn, ECR_Overlap);
     
     Box->OnComponentBeginOverlap.AddDynamic(this, &ATriggerPrinter::OnOverlapBegin);
-
+```
 Both are declared in the .h file but the .cpp is where they are defined:
-
+```C
     public:
         ATriggerPrinter();
     
@@ -75,7 +75,7 @@ Both are declared in the .h file but the .cpp is where they are defined:
             bool bFromSweep,
             const FHitResult& SweepResult
         );
-
+```
 For aid to visual, I made the collision box visisble during game from the actor's details pannel.
 
 [Img]
