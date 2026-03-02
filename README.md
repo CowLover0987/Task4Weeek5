@@ -78,7 +78,7 @@ Both are declared in the .h file but the .cpp is where they are defined:
 ```
 For aid to visual, I made the collision box visisble during game from the actor's details pannel.
 
-!(TriggerPrinter)(https://github.com/CowLover0987/Task4Weeek5/blob/main/Screenshot%202026-03-02%20170934.png)
+![TriggerPrinter](https://github.com/CowLover0987/Task4Weeek5/blob/main/Screenshot%202026-03-02%20170934.png)
 
 **Demonstration video link:**
 
